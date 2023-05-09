@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FilterAndSearch</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">search</string>
+    <string name="doctor">Doctor</string>
+    <string name="driver">Driver</string>
+    <string name="teacher">Teacher</string>
+    <string name="all_job">All Job</string>
+    <string name="des">Des</string>
+    <string name="inc">Inc</string>
+    <string name="white">White</string>
+    <string name="black">Black</string>
+    <string name="yellow">Yellow</string>
+    <string name="red">Red</string>
+    <string name="blue">Blue</string>
+    <string name="clear">clear</string>
+    <string name="apply">apply</string>
+</resources>

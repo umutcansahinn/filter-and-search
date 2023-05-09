@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/search"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupJob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8BBD0"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/doctor" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/driver" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teacher" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAllJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_job" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupSortBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFCDD2"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupJob"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/des" />
+
+        <RadioButton
+            android:id="@+id/radioButtonInc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inc" />
+
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D1C4E9"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSortBy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkBoxWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkBoxBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxWhite"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkBoxYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxBlack"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkBoxRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/red"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxYellow"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkBoxBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxRed"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonApply"/>
+
+    <Button
+        android:id="@+id/buttonApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apply"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintStart_toEndOf="@+id/buttonClear"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
