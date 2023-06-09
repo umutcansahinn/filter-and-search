@@ -8,7 +8,7 @@
     <string name="teacher">Teacher</string>
     <string name="all_job">All Job</string>
     <string name="des">Des</string>
-    <string name="inc">Inc</string>
+    <string name="Asc">Asc</string>
     <string name="white">White</string>
     <string name="black">Black</string>
     <string name="yellow">Yellow</string>
@@ -16,4 +16,5 @@
     <string name="blue">Blue</string>
     <string name="clear">clear</string>
     <string name="apply">apply</string>
+    <string name="all_color">All Color</string>
 </resources>

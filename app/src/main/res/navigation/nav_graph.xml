@@ -7,19 +7,29 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.umutcansahin.filterandsearch.HomeFragment"
+        android:name="com.umutcansahin.filterandsearch.ui.home_screen.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_searchAndFilterFragment"
             app:destination="@id/searchAndFilterFragment" />
+        <argument
+            android:name="filter"
+            app:argType="com.umutcansahin.filterandsearch.filter.Filter"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <dialog
         android:id="@+id/searchAndFilterFragment"
-        android:name="com.umutcansahin.filterandsearch.SearchAndFilterFragment"
+        android:name="com.umutcansahin.filterandsearch.ui.filter_screen.SearchAndFilterFragment"
         android:label="SearchAndFilterFragment" >
         <argument
             android:name="filter"
-            app:argType="com.umutcansahin.filterandsearch.Filter" />
+            app:argType="com.umutcansahin.filterandsearch.filter.Filter"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_searchAndFilterFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </dialog>
 </navigation>

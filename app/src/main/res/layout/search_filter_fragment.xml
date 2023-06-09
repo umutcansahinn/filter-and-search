@@ -67,10 +67,10 @@
             android:text="@string/des" />
 
         <RadioButton
-            android:id="@+id/radioButtonInc"
+            android:id="@+id/radioButtonAsc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/inc" />
+            android:text="@string/Asc" />
 
     </RadioGroup>
 
@@ -122,6 +122,14 @@
             android:text="@string/blue"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/checkBoxRed"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkBoxAllColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_color"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxBlue"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
