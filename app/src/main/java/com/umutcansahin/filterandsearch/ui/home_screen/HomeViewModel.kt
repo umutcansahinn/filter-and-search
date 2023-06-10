@@ -20,23 +20,43 @@ class HomeViewModel @Inject constructor() : ViewModel() {
 
     fun filterToList(filter: Filter) {
         filter.colorTypes.forEach {
-            Log.d("colors",it.name)
+            Log.d("colors", it.name)
         }
         val list = getList()
         val sortedList = when (filter.sortBy) {
             SortBy.DES -> list.sortedByDescending { it.id }
             SortBy.ASC -> list.sortedBy { it.id }
         }
-        val jobTypeList = when(filter.jobType) {
-            JobType.ALL_JOB->{sortedList}
-            JobType.TEACHER-> {sortedList.filter { it.jobType == JobType.TEACHER }}
-            JobType.DRIVER-> {sortedList.filter { it.jobType == JobType.DRIVER }}
-            JobType.DOCTOR-> {sortedList.filter { it.jobType == JobType.DOCTOR }}
+        val jobTypeList = when (filter.jobType) {
+            JobType.ALL_JOB -> {
+                sortedList
+            }
+            JobType.TEACHER -> {
+                sortedList.filter { it.jobType == JobType.TEACHER }
+            }
+            JobType.DRIVER -> {
+                sortedList.filter { it.jobType == JobType.DRIVER }
+            }
+            JobType.DOCTOR -> {
+                sortedList.filter { it.jobType == JobType.DOCTOR }
+            }
         }
-        val colorList = jobTypeList.filter {
-            filter.colorTypes.contains(it.colorType)
+        val colorList = if (filter.colorTypes.isEmpty()) {
+            jobTypeList
+        } else {
+            jobTypeList.filter {
+                filter.colorTypes.contains(it.colorType)
+            }
         }
-        _userList.value = colorList
+        val searchList = if (filter.search.isBlank().not()) {
+            colorList.filter {
+                it.name.contains(filter.search)
+            }
+        } else {
+            colorList
+        }
+
+        _userList.value = searchList
     }
 
     private fun getList(): ArrayList<User> {

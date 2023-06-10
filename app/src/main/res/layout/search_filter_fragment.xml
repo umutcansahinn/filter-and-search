@@ -112,15 +112,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/red"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/checkBoxYellow"/>
+            app:layout_constraintTop_toBottomOf="@id/checkBoxWhite"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/checkBoxBlue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/blue"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkBoxWhite"
             app:layout_constraintStart_toEndOf="@+id/checkBoxRed"/>
 
         <androidx.appcompat.widget.AppCompatCheckBox
@@ -128,8 +128,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/all_color"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/checkBoxBlue"/>
+            app:layout_constraintTop_toBottomOf="@id/checkBoxWhite"
+            app:layout_constraintStart_toEndOf="@id/checkBoxBlue"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

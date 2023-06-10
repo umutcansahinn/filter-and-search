@@ -50,6 +50,7 @@ class SearchAndFilterFragment : BottomSheetDialogFragment() {
     }
 
     private fun drawUiWithFilter() {
+        binding.editTextSearch.setText(filter.search)
         when (filter.sortBy) {
             SortBy.DES -> binding.radioButtonDes.isChecked = true
             SortBy.ASC -> binding.radioButtonAsc.isChecked = true
@@ -132,6 +133,7 @@ class SearchAndFilterFragment : BottomSheetDialogFragment() {
                 drawUiWithFilter()
             }
             buttonApply.setOnClickListener {
+                filter.search = editTextSearch.text.toString()
                 when {
                     radioButtonDes.isChecked -> {
                         filter.sortBy = SortBy.DES
